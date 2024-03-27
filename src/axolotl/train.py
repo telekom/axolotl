@@ -110,6 +110,21 @@ def train(
         total_num_steps,
     )
 
+    print("#################### LOGGING TRAIN CONFIG in train.py ####################")
+    from pprint import pprint
+
+    print(">>> cfg")
+    print(type(cfg))
+    pprint(cfg)
+
+    print(">>> peft_config")
+    print(type(peft_config))
+    pprint(peft_config)
+
+    # exit
+    import sys
+    sys.exit(1)
+
     # go ahead and presave, so we have the adapter config available to inspect
     if peft_config:
         LOG.info(f"Pre-saving adapter config to {cfg.output_dir}")

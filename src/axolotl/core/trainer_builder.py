@@ -1508,6 +1508,22 @@ class HFDPOTrainerBuilder(TrainerBuilderBase):
             callbacks=self.get_callbacks(),
             **dpo_trainer_kwargs,
         )
+
+        print("#################### LOGGING TRAIN CONFIG in trainer_builder.py ####################")
+        from pprint import pprint
+
+        print(">>> training_args")
+        print(type(training_args))
+        pprint(training_args)
+
+        print(">>> cfg")
+        print(type(self.cfg))
+        pprint(self.cfg)
+
+        print(">>> dpo_trainer_kwargs")
+        print(type(dpo_trainer_kwargs))
+        pprint(dpo_trainer_kwargs)
+
         dpo_trainer = self.hook_post_create_trainer(dpo_trainer)
         for callback in self.get_post_trainer_create_callbacks(dpo_trainer):
             dpo_trainer.add_callback(callback)
