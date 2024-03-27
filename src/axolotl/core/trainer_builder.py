@@ -1511,15 +1511,19 @@ class HFDPOTrainerBuilder(TrainerBuilderBase):
 
         print("#################### LOGGING TRAIN CONFIG in trainer_builder.py ####################")
         from pprint import pprint
+        import time
 
+        time.sleep(5)
         print(">>> training_args")
         print(type(training_args))
         pprint(training_args)
 
+        time.sleep(5)
         print(">>> cfg")
         print(type(self.cfg))
         pprint(self.cfg)
 
+        time.sleep(5)
         print(">>> dpo_trainer_kwargs")
         print(type(dpo_trainer_kwargs))
         pprint(dpo_trainer_kwargs)

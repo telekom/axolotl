@@ -112,11 +112,14 @@ def train(
 
     print("#################### LOGGING TRAIN CONFIG in train.py ####################")
     from pprint import pprint
+    import time
 
+    time.sleep(5)
     print(">>> cfg")
     print(type(cfg))
     pprint(cfg)
 
+    time.sleep(5)
     print(">>> peft_config")
     print(type(peft_config))
     pprint(peft_config)
